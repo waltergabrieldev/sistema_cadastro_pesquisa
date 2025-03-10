@@ -45,9 +45,7 @@ def verificacao(cpf):
 def confirmacao_cpf_padrao():
     indice_cpf = 0
     while indice_cpf < 14:
-        #recebimento do cpf do usuario
         cpf = input('cadastre um cpf(***.***.***-**): \n>>> ')
-        #verificando se o usuario nao burlou o recebimento 
         if len(cpf) != 14:
             print("Erro: O CPF deve ter exatamente 14 caracteres no formato ***.***.***-**")
             continue
