@@ -21,10 +21,12 @@ def procurando_por_telefone(telefone):
       
     id_busca_telefone = [id for id, info in dicionario_de_cadastrados.items() if info["telefone"] == telefone]   
     try:
-        for chaves, valores in dicionario_de_cadastrados[id_busca_telefone["telefone"]].items():
+        for chaves, valores in dicionario_de_cadastrados[id_busca_telefone[0]].items():
                 print(f"{chaves} : {valores}")
+        print("-" * 24)
     except IndexError:
-            print("Telefone não encontrado!")
+            print("Telefone não encontrado!\n", "-" * 24)
+            
         
 
-    
+     
